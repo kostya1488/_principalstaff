@@ -2,7 +2,17 @@
 * {
   box-sizing: border-box; }
 
+html,
+body {
+  height: 100%; }
+
+/* Then override the scrollbar by a custom scrollable element: */
+.customnavigation {
+  height: 100%;
+  overflow-y: auto; }
+
 .body {
+  overflow-y: auto;
   font-family: 'Montserrat', sans-serif;
   color: #333333; }
   .body a,
@@ -43,7 +53,9 @@
 @media (max-width: 575.98px) {
   section {
     padding-top: 50px;
-    padding-bottom: 50px; } }
+    padding-bottom: 50px;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100); } }
 
 @media (min-width: 576px) and (max-width: 1199.98px) {
   section {
@@ -80,9 +92,9 @@
         width: 65%; }
 
 .section_intro {
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
   padding-top: 76px; }
+  .section_intro .intro_inner_wrap {
+    transition: .3s; }
   .section_intro .intro_text h2 {
     font-size: 36px; }
   .section_intro .logo_wrap {
