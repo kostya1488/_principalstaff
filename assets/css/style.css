@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+* {
+  box-sizing: border-box; }
+
+.body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333333; }
+  .body a,
+  .body a:hover {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: #fff; }
+  .body small {
+    font-size: 16px; }
+  .body p {
+    font-size: 24px;
+    margin: 0; }
+  .body h3 {
+    font-size: 24px; }
+  .body h2 {
+    font-size: 24px; }
+  .body .button {
+    display: block;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 24px; }
+    .body .button.button_primary {
+      padding: 12px 20px;
+      background: linear-gradient(91.43deg, #FF70C7 0%, #FF9E47 28.91%, #FF7469 50.99%, #FF498B 73.59%, #FF33FE 100.92%);
+      color: #fff; }
+    .body .button.button_secondary {
+      padding: 11px 20px;
+      border: 1px solid #333333;
+      color: #333333; }
+  .body .container {
+    max-width: 1200; }
+    @media (max-width: 575.98px) {
+      .body .container {
+        padding-left: 20px;
+        padding-right: 20px; } }
+
+@media (max-width: 575.98px) {
+  section {
+    padding-top: 50px;
+    padding-bottom: 50px; } }
+
+@media (min-width: 576px) and (max-width: 1199.98px) {
+  section {
+    padding-top: 70px;
+    padding-bottom: 70px; } }
+
+@media (min-width: 1200px) {
+  section {
+    padding-top: 100px;
+    padding-bottom: 100px; } }
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 0; }
+  .header .brand_label {
+    font-weight: 600;
+    font-size: 24px; }
+  .header .munu_button {
+    width: 40px;
+    height: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end; }
+    .header .munu_button div {
+      width: 100%;
+      height: 3px;
+      border-radius: 3px;
+      background-color: #333333; }
+      .header .munu_button div:last-child {
+        width: 65%; }
+
+.section_intro {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  padding-top: 76px; }
+  .section_intro .intro_text h2 {
+    font-size: 36px; }
+  .section_intro .logo_wrap {
+    position: relative; }
+    .section_intro .logo_wrap .img_wrap {
+      width: 90px; }
+      .section_intro .logo_wrap .img_wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; }
+    .section_intro .logo_wrap .wrapper {
+      overflow: hidden;
+      margin: 0 auto;
+      height: 200px;
+      width: 200px;
+      position: relative;
+      left: 0;
+      top: 0; }
+      .section_intro .logo_wrap .wrapper .img_wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+        margin-left: -50px; }
+        .section_intro .logo_wrap .wrapper .img_wrap img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain; }
+      .section_intro .logo_wrap .wrapper svg {
+        animation: rotate 20s linear infinite;
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: calc(50% - 150px);
+        left: calc(50% - 150px);
+        overflow: hidden; }
+        .section_intro .logo_wrap .wrapper svg:after {
+          display: block;
+          content: "hello"; }
+        .section_intro .logo_wrap .wrapper svg .circle-text {
+          font: 85px Montserrat;
+          letter-spacing: 7px;
+          font-weight: 500;
+          width: 100%;
+          fill: black; }
+
+@keyframes rotate {
+  to {
+    transform: rotate(-360deg); } }
