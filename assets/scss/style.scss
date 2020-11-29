@@ -117,7 +117,7 @@ section {
         }
         .munu_button {
             width: 40px;
-            height: 20px;
+            height: 24px;
             position: relative;
             z-index: 2;
             div {
@@ -132,10 +132,10 @@ section {
                     top: 0;
                 }
                 &:nth-child(2) {
-                    top: 8px;
+                    top: 10px;
                 }
                 &:nth-child(3) {
-                    top: 16px;
+                    top: 20px;
                     width: 65%;
                 }
             }
@@ -193,19 +193,19 @@ section {
             .munu_button {
                 div {
                     &:nth-child(1) {
-                        transform: rotate(-20deg);
-                        width: 30%;
-                        right: 35%;
-                        top: 6px;
+                        transform: rotate(-26deg);
+                        width: 60%;
+                        right: 40%;
+                        top: 4px;
                     }
                     &:nth-child(2) {
-                        width: 65%;
+                        // width: 65%;
                     }
                     &:nth-child(3) {
-                        transform: rotate(20deg);
-                        width: 30%;
-                        right: 35%;
-                        top: 10px;
+                        transform: rotate(26deg);
+                        width: 60%;
+                        right: 40%;
+                        top: 16px;
                     }
                 }
             }
