@@ -2,19 +2,9 @@
 * {
   box-sizing: border-box; }
 
-html,
-body {
-  height: 100%; }
-
-/* Then override the scrollbar by a custom scrollable element: */
-.customnavigation {
-  height: 100%;
-  overflow-y: auto; }
-
 .body {
-  overflow-y: auto;
   font-family: 'Montserrat', sans-serif;
-  color: #333333; }
+  color: #212529; }
   .body a,
   .body a:hover {
     text-decoration: none;
@@ -27,9 +17,13 @@ body {
     font-size: 24px;
     margin: 0; }
   .body h3 {
-    font-size: 24px; }
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0; }
   .body h2 {
-    font-size: 24px; }
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0; }
   .body .button {
     display: block;
     border-radius: 3px;
@@ -41,8 +35,8 @@ body {
       color: #fff; }
     .body .button.button_secondary {
       padding: 11px 20px;
-      border: 1px solid #333333;
-      color: #333333; }
+      border: 1px solid #212529;
+      color: #212529; }
   .body .container {
     max-width: 1200; }
     @media (max-width: 575.98px) {
@@ -53,9 +47,7 @@ body {
 @media (max-width: 575.98px) {
   section {
     padding-top: 50px;
-    padding-bottom: 50px;
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100); } }
+    padding-bottom: 50px; } }
 
 @media (min-width: 576px) and (max-width: 1199.98px) {
   section {
@@ -67,82 +59,211 @@ body {
     padding-top: 100px;
     padding-bottom: 100px; } }
 
-.header {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  padding: 20px 0; }
-  .header .brand_label {
-    font-weight: 600;
-    font-size: 24px; }
-  .header .munu_button {
-    width: 40px;
-    height: 20px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end; }
-    .header .munu_button div {
-      width: 100%;
-      height: 3px;
-      border-radius: 3px;
-      background-color: #333333; }
-      .header .munu_button div:last-child {
-        width: 65%; }
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
 
-.section_intro {
-  padding-top: 76px; }
-  .section_intro .intro_inner_wrap {
-    transition: .3s; }
-  .section_intro .intro_text h2 {
-    font-size: 36px; }
-  .section_intro .logo_wrap {
-    position: relative; }
-    .section_intro .logo_wrap .img_wrap {
-      width: 90px; }
-      .section_intro .logo_wrap .img_wrap img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain; }
-    .section_intro .logo_wrap .wrapper {
-      overflow: hidden;
-      margin: 0 auto;
-      height: 200px;
-      width: 200px;
+@media (max-width: 575.98px) {
+  .header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 0; }
+    .header .brand_label {
+      font-weight: 600;
+      font-size: 24px; }
+    .header .munu_button {
+      width: 40px;
+      height: 20px;
       position: relative;
-      left: 0;
-      top: 0; }
-      .section_intro .logo_wrap .wrapper .img_wrap {
+      z-index: 2; }
+      .header .munu_button div {
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+        background-color: #212529;
+        transition: .3s; }
+        .header .munu_button div:nth-child(1) {
+          top: 0; }
+        .header .munu_button div:nth-child(2) {
+          top: 8px; }
+        .header .munu_button div:nth-child(3) {
+          top: 16px;
+          width: 65%; }
+      .header .munu_button::after {
+        content: "";
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 100px;
-        height: 100px;
-        margin-top: -50px;
-        margin-left: -50px; }
-        .section_intro .logo_wrap .wrapper .img_wrap img {
+        width: 50px;
+        height: 50px;
+        margin-top: -25px;
+        margin-left: -25px;
+        border-radius: 50%;
+        background-color: rgba(255, 116, 191, 0.3);
+        opacity: 0;
+        transition: .3s; }
+      .header .munu_button:active::after {
+        opacity: 1;
+        transform: scale(1.3); }
+    .header .menu_wrap {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      width: 100%;
+      background-color: #fff;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      transform: translateX(-100vw);
+      transition: .3s; }
+      .header .menu_wrap .menu li + li {
+        margin-top: 25px; }
+      .header .menu_wrap .menu .menu_item a {
+        font-weight: bold;
+        font-size: 24px;
+        color: #212529; }
+    .header.menu_opened .menu_wrap {
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
+      transform: translateX(0); }
+    .header.menu_opened .munu_button div:nth-child(1) {
+      transform: rotate(-20deg);
+      width: 30%;
+      right: 35%;
+      top: 6px; }
+    .header.menu_opened .munu_button div:nth-child(2) {
+      width: 65%; }
+    .header.menu_opened .munu_button div:nth-child(3) {
+      transform: rotate(20deg);
+      width: 30%;
+      right: 35%;
+      top: 10px; } }
+
+@media (max-width: 575.98px) {
+  .section_intro {
+    padding-top: 76px;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100); }
+    .section_intro .intro_inner_wrap {
+      transition: .3s; }
+    .section_intro .intro_text h2 {
+      font-size: 36px; }
+    .section_intro .logo_wrap {
+      position: relative; }
+      .section_intro .logo_wrap .img_wrap {
+        width: 90px; }
+        .section_intro .logo_wrap .img_wrap img {
           width: 100%;
           height: 100%;
           object-fit: contain; }
-      .section_intro .logo_wrap .wrapper svg {
-        animation: rotate 20s linear infinite;
-        width: 300px;
-        height: 300px;
-        position: absolute;
-        top: calc(50% - 150px);
-        left: calc(50% - 150px);
-        overflow: hidden; }
-        .section_intro .logo_wrap .wrapper svg:after {
-          display: block;
-          content: "hello"; }
-        .section_intro .logo_wrap .wrapper svg .circle-text {
-          font: 85px Montserrat;
-          letter-spacing: 7px;
-          font-weight: 500;
-          width: 100%;
-          fill: black; }
+      .section_intro .logo_wrap .logo_inner_wrap {
+        overflow: hidden;
+        margin: 0 auto;
+        height: 200px;
+        width: 200px;
+        position: relative;
+        left: 0;
+        top: 0; }
+        .section_intro .logo_wrap .logo_inner_wrap .img_wrap {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100px;
+          height: 100px;
+          margin-top: -50px;
+          margin-left: -50px; }
+          .section_intro .logo_wrap .logo_inner_wrap .img_wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; }
+        .section_intro .logo_wrap .logo_inner_wrap svg {
+          animation: rotate 50s linear infinite;
+          width: 300px;
+          height: 300px;
+          position: absolute;
+          top: calc(50% - 150px);
+          left: calc(50% - 150px);
+          overflow: hidden; }
+          .section_intro .logo_wrap .logo_inner_wrap svg:after {
+            display: block;
+            content: "hello"; }
+          .section_intro .logo_wrap .logo_inner_wrap svg .circle-text {
+            font: 85px Montserrat;
+            letter-spacing: 7px;
+            font-weight: 500;
+            width: 100%;
+            fill: #212529; }
+  @keyframes rotate {
+    to {
+      transform: rotate(-360deg); } } }
 
-@keyframes rotate {
-  to {
-    transform: rotate(-360deg); } }
+@media (max-width: 575.98px) {
+  .section_profession .card {
+    margin-top: 30px;
+    min-height: 280px;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 1s;
+    -webkit-transform-style: preserve-3d; }
+    .section_profession .card .card_side {
+      border-radius: 3px;
+      margin: 0px;
+      padding: 0px;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); }
+    .section_profession .card .card_front {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden; }
+      .section_profession .card .card_front .front_top {
+        flex: auto;
+        background: rgba(255, 116, 191, 0.5);
+        padding: 20px;
+        display: flex; }
+        .section_profession .card .card_front .front_top > div {
+          flex: 1; }
+        .section_profession .card .card_front .front_top .counter_wrap {
+          padding-right: 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between; }
+          .section_profession .card .card_front .front_top .counter_wrap .count {
+            line-height: .8;
+            font-weight: bold;
+            font-size: 72px;
+            color: #FFFFFF; }
+          .section_profession .card .card_front .front_top .counter_wrap .card_btn {
+            height: 40px;
+            background: #FF74BF url(../img/svg/arrow.svg) no-repeat;
+            background-position: 90% 50%;
+            border-radius: 3px; }
+        .section_profession .card .card_front .front_top .img_wrap img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain; }
+      .section_profession .card .card_front .front_bot {
+        padding: 20px; }
+        .section_profession .card .card_front .front_bot h3 {
+          margin-bottom: 10px; }
+    .section_profession .card .card_back {
+      padding: 20px;
+      background: rgba(255, 116, 191, 0.5);
+      -webkit-transform: rotateY(180deg); }
+      .section_profession .card .card_back ul {
+        padding-left: 1rem;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+    .section_profession .card.flipped {
+      -webkit-transform: rotateY(180deg); } }
