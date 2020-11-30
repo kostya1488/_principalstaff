@@ -13,11 +13,10 @@ $(document).ready(function() {
     $('.munu_button').click(function(e) {
         e.preventDefault();
         $('.header').toggleClass('menu_opened');
-        $('.body').css('overflow', 'hidden');
+        $('.body').toggleClass('hidden');
     });
     $('.card').click(function(e) {
         e.preventDefault();
         $(this).toggleClass('flipped');
     });
-
 });
