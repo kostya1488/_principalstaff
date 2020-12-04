@@ -18,23 +18,23 @@
     <header id="header" class="header">
         <div class="container">
             <div class="row align-items-center justify-content-between">
-                <div class="col-8">
+                <div class="col-8 col-sm-5">
                     <div class="brand_label">
                         Principal Staff
                     </div>
                 </div>
-                <div class="col-xl order-2">
+                <div class="col-sm-7 order-2">
                     <div class="menu_wrap">
                         <ul class="menu">
-                            <li class="menu_item"><a href="#" class="nav_link">Алгоритм поиска</a></li>
-                            <li class="menu_item"><a href="#" class="nav_link">Специализации</a></li>
-                            <li class="menu_item"><a href="#" class="nav_link">Методология поиска</a></li>
-                            <li class="menu_item"><a href="#" class="nav_link">Интересные цифры</a></li>
-                            <li class="menu_item"><a href="#" class="nav_link">Клиенты</a></li>
-                            <li class="menu_item"><a href="#" class="nav_link">Оставить заявку</a></li>
+                            <li class="menu_item"><a href="#steps" class="nav_link">Алгоритм<span class="d-sm-none">поиска</span></a></li>
+                            <li class="menu_item"><a href="#" class="nav_link">Специализация</a></li>
+                            <li class="menu_item"><a href="#search_method" class="nav_link">Методология<span class="d-sm-none">поиска</span></a></li>
+                            <!-- <li class="menu_item d-sm-none"><a href="#" class="nav_link">Интересные цифры</a></li> -->
+                            <!-- <li class="menu_item d-sm-none"><a href="#" class="nav_link">Клиенты</a></li> -->
+                            <li class="menu_item d-sm-none d-lg-block"><a href="#contacts" class="nav_link">Оставить заявку</a></li>
                         </ul>
                         <div>
-                            <ul class="social_bar">
+                            <ul class="social_bar d-sm-none">
                                 <li>
                                     <a href=""><img src="assets/img/svg/insta.svg" alt=""></a>
                                 </li>
@@ -45,14 +45,14 @@
                                     <a href=""><img src="assets/img/svg/tg.svg" alt=""></a>
                                 </li>
                             </ul>
-                            <ul class="contact_bar">
+                            <ul class="contact_bar d-sm-none">
                                 <li><a href="tel:+380">+380996661488</a></li>
                                 <li><a href="tel:+380">+380996661488</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-4 d-sm-none">
                     <div class="munu_button float-right">
                         <div></div>
                         <div class="munu_button__mid"></div>
@@ -66,14 +66,10 @@
 
     <!-- intro -->
     <section id="intro" class="section_intro">
-        <div class="container h-100">
-            <div class="row h-100">
-                <div class="d-flex flex-column justify-content-between">
-                    <div class="intro_text">
-                        <h2>Экономьте время с нами </h2>
-                        <small class="mt-3">Добро пожаловать на сайт агентства по подбору персонала.</small>
-                    </div>
-                    <!-- -------------------------- -->
+        <div class="container">
+            <div class="row align-items-sm-center justify-content-sm-between">
+                <div class="col-sm-5 d-none d-sm-block">
+                    <!-- logo_wrap desktop -------------------------- -->
                     <div class="logo_wrap">
                         <div class="logo_inner_wrap">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="10cm" height="10cm" viewBox="0 0 1000 1000" preserveAspectRatio="xMinYMin">
@@ -89,11 +85,33 @@
                         </div>
                     </div>
                     <!-- -------------------------- -->
-                    <div class="intro_buttons">
+                </div>
+                <div class="col-sm-6 d-flex flex-column justify-content-between">
+                    <div class="intro_text">
+                        <h2 class="mb-3 mb-xl-5">Мы экономим ваше время</h2>
+                        <small class="">Добро пожаловать на сайт агентства по подбору персонала.</small>
+                    </div>
+                    <!-- logo_wrap mobile -------------------------- -->
+                    <div class="logo_wrap d-sm-none">
+                        <div class="logo_inner_wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="10cm" height="10cm" viewBox="0 0 1000 1000" preserveAspectRatio="xMinYMin">
+                          <defs>
+                          <path id="textPath" d="M 250 500 A 250,250 0 1 1 250 500.0001"/>
+                          </defs>
+                          <text class="circle-text" x="0" y="0" text-anchor="middle"><textPath xlink:href="#textPath" startOffset="50%" >principal staff · principal staff · 
+                        </textPath></text>
+                          </svg>
+                            <div class="img_wrap">
+                                <img src="assets/img/brand_logo.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+                    <div class="intro_buttons d-sm-flex justify-content-between justify-content-md-end mt-sm-4">
                         <a href="#feedback" class="button button_primary">
                             Оставить заявку
                         </a>
-                        <a href="#contacts" class="button button_secondary mt-4">
+                        <a href="#contacts" class="button button_secondary mt-4 mt-sm-0 ml-md-4">
                             Контакты
                         </a>
                     </div>
@@ -115,7 +133,7 @@
                 За время работы компании выполнены проекты по поиску в следующих отраслях:
             </p>
             <div class="row">
-                <div class="col-sm-6 card_wrap">
+                <div class="col-sm-6 col-xl-4 card_wrap">
                     <div class="card">
                         <div class="card_front card_side">
                             <div class="front_top">
@@ -154,7 +172,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 card_wrap">
+                <div class="col-sm-6 col-xl-4 card_wrap">
                     <div class="card">
                         <div class="card_front card_side">
                             <div class="front_top">
@@ -194,7 +212,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 card_wrap">
+                <div class="col-sm-6 col-xl-4 card_wrap">
                     <div class="card">
                         <div class="card_front card_side">
                             <div class="front_top">
@@ -233,7 +251,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 card_wrap">
+                <div class="col-sm-6 col-xl-4 card_wrap">
                     <div class="card">
                         <div class="card_front card_side">
                             <div class="front_top">
@@ -272,7 +290,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 card_wrap">
+                <div class="col-sm-6 col-xl-4 card_wrap">
                     <div class="card">
                         <div class="card_front card_side">
                             <div class="front_top">
@@ -311,7 +329,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 card_wrap">
+                <div class="col-sm-6 col-xl-4 card_wrap">
                     <div class="card">
                         <div class="card_front card_side">
                             <div class="front_top">
@@ -366,68 +384,108 @@
                 </div>
             </div>
             <ul class="steps_list">
-                <li class="list_item">
-                    <div>
-                        <div class="item_num">01</div>
+                <li>
+                    <div class="li_marker">
+                        <div class="li_marker__inner"></div>
                     </div>
-                    <div class="item_text">
-                        Прием заявок, знакомство с Вашим бизнесом
-                    </div>
-                </li>
-                <li class="list_item">
-                    <div>
-                        <div class="item_num">02</div>
-                    </div>
-                    <div class="item_text">
-                        Анализ рынка и талантов
+                    <div class="list_item">
+                        <div class="item_num_wrap">
+                            <div class="item_num">01</div>
+                        </div>
+                        <div class="item_text">
+                            Прием заявок, знакомство с Вами
+                        </div>
                     </div>
                 </li>
-                <li class="list_item">
-                    <div>
-                        <div class="item_num">03</div>
+                <li>
+                    <div class="li_marker">
+                        <div class="li_marker__inner"></div>
                     </div>
-                    <div class="item_text">
-                        Собеседование (рекрутинговое агентство)
-                    </div>
-                </li>
-                <li class="list_item">
-                    <div>
-                        <div class="item_num">04</div>
-                    </div>
-                    <div class="item_text">
-                        Проверка рекомендаций
+                    <div class="list_item">
+                        <div class="item_num_wrap">
+                            <div class="item_num">02</div>
+                        </div>
+                        <div class="item_text">
+                            Анализ рынка и талантов
+                        </div>
                     </div>
                 </li>
-                <li class="list_item">
-                    <div>
-                        <div class="item_num">05</div>
+                <li>
+                    <div class="li_marker">
+                        <div class="li_marker__inner"></div>
                     </div>
-                    <div class="item_text">
-                        Презентация финальных кандидатов
-                    </div>
-                </li>
-                <li class="list_item">
-                    <div>
-                        <div class="item_num">06</div>
-                    </div>
-                    <div class="item_text">
-                        Собеседование (заказчик)
+                    <div class="list_item">
+                        <div class="item_num_wrap">
+                            <div class="item_num">03</div>
+                        </div>
+                        <div class="item_text">
+                            Собеседование (рекрут. агентство)
+                        </div>
                     </div>
                 </li>
-                <li class="list_item">
-                    <div>
-                        <div class="item_num">07</div>
+                <li>
+                    <div class="li_marker">
+                        <div class="li_marker__inner"></div>
                     </div>
-                    <div class="item_text">
-                        Выход сотрудника на работу
+                    <div class="list_item">
+                        <div class="item_num_wrap">
+                            <div class="item_num">04</div>
+                        </div>
+                        <div class="item_text">
+                            Проверка рекомендаций
+                        </div>
                     </div>
                 </li>
-                <li class="list_item">
-                    <div>
-                        <div class="item_num">08</div>
+                <li>
+                    <div class="li_marker">
+                        <div class="li_marker__inner"></div>
                     </div>
-                    <div class="item_text">
-                        Гарантийные обязательства агентства
+                    <div class="list_item">
+                        <div class="item_num_wrap">
+                            <div class="item_num">05</div>
+                        </div>
+                        <div class="item_text">
+                            Презентация финальных кандидатов
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="li_marker">
+                        <div class="li_marker__inner"></div>
+                    </div>
+                    <div class="list_item">
+                        <div class="item_num_wrap">
+                            <div class="item_num">06</div>
+                        </div>
+                        <div class="item_text">
+                            Собеседование (заказчик)
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="li_marker">
+                        <div class="li_marker__inner"></div>
+                    </div>
+                    <div class="list_item">
+                        <div class="item_num_wrap">
+                            <div class="item_num">07</div>
+                        </div>
+                        <div class="item_text">
+                            Выход сотрудника на работу
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="li_marker">
+                        <div class="li_marker__inner"></div>
+                    </div>
+                    <div class="list_item">
+                        <div class="item_num_wrap">
+                            <div class="item_num">08</div>
+                        </div>
+                        <div class="item_text">
+                            Гарантия агентства
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -437,6 +495,75 @@
 
     <!-- advantages -->
     <section id="advantages" class="section_advantages">
+        <div class="container">
+            <div class="row">
+                <div class="section_title">
+                    <h2>Почему principal staff ?</h2>
+                </div>
+            </div>
+            <div class="advantages_wrap">
+                <div class="card_wrap">
+                    <div class="card">
+                        <div class="card_front card_side">
+                            <img src="assets/img/svg/stars.svg" alt="">
+                        </div>
+                        <div class="card_back card_side">
+                            <p>
+                                Заботимся о репутации наших клиентов
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_wrap">
+                    <div class="card">
+                        <div class="card_front card_side">
+                            <img src="assets/img/svg/clock.svg" alt="">
+                        </div>
+                        <div class="card_back card_side">
+                            <p>
+                                Экономим десятки часов Вашего времени на поиск и оценку кандидатов
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_wrap">
+                    <div class="card">
+                        <div class="card_front card_side">
+                            <img src="assets/img/svg/earth.svg" alt="">
+                        </div>
+                        <div class="card_back card_side">
+                            <p>
+                                Работаем по всей территории Украины, а также с Европой и США
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_wrap">
+                    <div class="card">
+                        <div class="card_front card_side">
+                            <img src="assets/img/svg/light-bulb.svg" alt="">
+                        </div>
+                        <div class="card_back card_side">
+                            <p>
+                                Мы ваши - советники по вопросам рынка труда для наших Клиентов
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_wrap">
+                    <div class="card">
+                        <div class="card_front card_side">
+                            <img src="assets/img/svg/pencill.svg" alt="">
+                        </div>
+                        <div class="card_back card_side">
+                            <p>
+                                Оцениваем личные качества и мотиваторы каждого кандидата
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </section>
     <!-- / advantages -->
@@ -451,12 +578,12 @@
                     </h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col text-center">
+            <div class="d-sm-flex flex-sm-column flex-xl-row align-items-xl-center justify-content-xl-between search_method_inner">
+                <div class="text-center method_iamage_wrap order-xl-1">
                     <img src="assets/img/search_method.png" alt="">
                 </div>
-                <div class="col">
-                    <div class="list_wrap">
+                <div class="list_outer_wrap">
+                    <div class="list_inner_wrap">
                         <div class="list_title">
                             <h3>
                                 Поиск кандидатов
@@ -471,8 +598,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="list_wrap">
+                <div class="list_outer_wrap order-xl-2">
+                    <div class="list_inner_wrap">
                         <div class="list_title">
                             <h3>
                                 Отбор кандидатов
@@ -481,8 +608,8 @@
                         <ul class="simple_list">
                             <li><span>FaceReader</span></li>
                             <li><span>Глубинное интервью</span></li>
-                            <li><span>Вопросы: проективные, case-вопросы</span></li>
-                            <li><span>Интервью по компетенциям</span></li>
+                            <li><span>Case-вопросы</span></li>
+                            <li><span>Интервью</span></li>
                             <li><span>Методика Hogan</span></li>
                         </ul>
                     </div>
@@ -507,7 +634,7 @@
                             45 000
                         </div>
                         <div class="stut_text">
-                            кандидатов в наших базах
+                            Кандидатов в нашей базе
                         </div>
                     </div>
                 </div>
@@ -517,7 +644,7 @@
                             >70
                         </div>
                         <div class="stut_text">
-                            счастливых клиентов на отечественном и международном рынках
+                            Довольных клиентов на нашем и зарубежном рынках
                         </div>
                     </div>
                 </div>
@@ -527,7 +654,7 @@
                             8
                         </div>
                         <div class="stut_text">
-                            лет опыта на рынке внешнего рекрутинга
+                            лет опыта в рекрутменте
                         </div>
                     </div>
                 </div>
@@ -537,65 +664,34 @@
                             90%
                         </div>
                         <div class="stut_text">
-                            заказчиков делают выбор среди наших кандидатов
+                            Клинтов делают выбор в пользу наших кандидатов
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- / search_stat -->
-
-    <!-- search_partners -->
-    <section id="search_partners" class="section_partners">
-        <div class="container">
-            <div class="row">
-                <div class="section_title">
-                    <h2>
-                        Компании которые нам доверяют
-                    </h2>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <img src="assets/img/partners/amway.png" alt="">
-            <img src="assets/img/partners/danone.png" alt="">
-            <img src="assets/img/partners/billa.png" alt="">
-            <img src="assets/img/partners/daxx.png" alt="">
-            <img src="assets/img/partners/metro.png" alt="">
-        </div>
-        <div>
-            <img src="assets/img/partners/biola.png" alt="">
-            <img src="assets/img/partners/vodafone.png" alt="">
-            <img src="assets/img/partners/unilever.png" alt="">
-            <img src="assets/img/partners/ca.png" alt="">
-        </div>
-
-        </div>
-    </section>
-    <!-- / search_partners -->
 
     <!-- feedback -->
     <section id="feedback" class="section_feedback">
         <div class="container">
-            <div class="row">
-                <div class="section_title">
-                    <h2> Поможем найти достойных кандидатов для вас
-                    </h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
+            <div class="row justify-content-center">
+                <div class="col-sm-10 col-xl-6 pr-xl-5">
+                    <div class="section_title">
+                        <h2> Заказать обратный звонок
+                        </h2>
+                    </div>
                     <small>
-                    Если у вас остались вопросы или вы хотите начать работу с нами оставьте свой номер. Мы позвоним вам что бы ответить на ваши вопросы либо обсудить условия сотрудничества.
+                        Если у вас остались вопросы или вы хотите начать работу с нами оставьте свой номер. Мы позвоним вам что бы ответить на ваши вопросы либо обсудить условия сотрудничества.
                     </small>
+                </div>
+                <div class="col-sm-10 col-xl-6 pl-xl-5">
                     <form action="">
-                        <input type="text" placeholder="имя *">
+                        <input type="text" placeholder="имя *" class="mt-xl-0">
                         <input type="text" placeholder="номер телефона *">
                         <input type="text" placeholder="е-mail">
                         <input type="text" placeholder="сообщение...">
-                        <button>отправить</button>
+                        <button>Заказать</button>
                     </form>
                 </div>
             </div>
@@ -607,26 +703,25 @@
     <section id="contacts" class="section_footer">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 col-sm-3">
                     <div class="brand_label">
                         Principal Staff
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-6 col-sm-3 order-sm-3">
                     <ul class="contact_bar">
                         <li><a href="tel:+380">099 666 14 88</a></li>
                         <li><a href="tel:+380">099 666 14 88</a></li>
                     </ul>
                 </div>
-                <div class="col-6">
+                <div class="col-6 col-sm-3">
                     <ul class="menu">
                         <li class="menu_item"><a href="#" class="nav_link">Алгоритм</a></li>
                         <li class="menu_item"><a href="#" class="nav_link">Специализации</a></li>
                         <li class="menu_item"><a href="#" class="nav_link">Методология</a></li>
-
                     </ul>
                 </div>
-                <div class="col-6">
+                <div class="col-6 col-sm-3">
                     <ul class="menu">
                         <li class="menu_item"><a href="#" class="nav_link">Цифры</a></li>
                         <li class="menu_item"><a href="#" class="nav_link">Клиенты</a></li>
